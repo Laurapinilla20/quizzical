@@ -30,6 +30,7 @@ function App() {
     getQuestion();
   }, [count]);
 
+
   function handleCheck() {
     let selected = true;
     questions.forEach((question) => {
@@ -41,6 +42,8 @@ function App() {
     if (!selected) {
       return;
     }
+
+  
     setQuestions((questions) =>
       questions.map((question) => {
         return { ...question, checked: true };
